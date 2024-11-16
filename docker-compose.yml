@@ -1,0 +1,11 @@
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./store_master.csv:/root/store_master.csv
+    container_name: myproject-app
